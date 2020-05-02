@@ -1,25 +1,37 @@
 @font-face{
-    font-family: "Segoe",sans-serif;
-    src: url("../fonts/Segoe.woff");
+    font-family: "ClearSansBold",sans-serif;
+    src: url("../fonts/ClearSansBold.ttf");
 }
 
 @font-face{
-    font-family: "SegoeBold",sans-serif;
-    src: url("../fonts/SegoeBold.woff");
+    font-family: "ClearSansLight";
+    src: url("../fonts/ClearSansLight.ttf");
 }
 
 @font-face{
-    font-family: "SegoeBoldItalic",sans-serif;
-    src: url("../fonts/SegoeBoldItalic.woff");
+    font-family: "ClearSansMedium";
+    src: url("../fonts/ClearSansMedium.ttf");
 }
 
 @font-face{
-    font-family: "SegoeItalic",sans-serif;
-    src: url("../fonts/SegoeItalic.woff");
+    font-family: "ClearSansRegular";
+    src: url("../fonts/ClearSansRegular.ttf");
 }
 
+@font-face{
+    font-family: "ClearSansThin";
+    src: url("../fonts/ClearSansThin.ttf");
+}
+
+body{
+    font-family: "ClearSansRegular";
+}
 
 h1{
-    font-family: "Segoe";
-    font-size: 2em;
+    font-family: "ClearSansMedium";
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.2em;
 }

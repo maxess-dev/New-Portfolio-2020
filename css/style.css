@@ -4,3 +4,21 @@
     box-sizing: border-box;
 }
 
+#home{
+    height: 100vh;
+    background-color: black;
+}
+
+#projects{
+    height: 100vh;
+}
+
+#skills{
+    height: 60vh;
+    background-color: red;
+}
+
+#studies{
+    height: 80vh;
+    background-color: blue;
+}
