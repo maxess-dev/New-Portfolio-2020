@@ -1,37 +1,32 @@
 @font-face{
-    font-family: "ClearSansBold",sans-serif;
-    src: url("../fonts/ClearSansBold.ttf");
+    font-family: "selawk";
+    src: url("../fonts/selawk.ttf");
 }
 
 @font-face{
-    font-family: "ClearSansLight";
-    src: url("../fonts/ClearSansLight.ttf");
+    font-family: "selawksb";
+    src: url("../fonts/selawksb.ttf");
 }
 
 @font-face{
-    font-family: "ClearSansMedium";
-    src: url("../fonts/ClearSansMedium.ttf");
+    font-family: "selawksl";
+    src: url("../fonts/selawksl.ttf");
 }
 
 @font-face{
-    font-family: "ClearSansRegular";
-    src: url("../fonts/ClearSansRegular.ttf");
-}
-
-@font-face{
-    font-family: "ClearSansThin";
-    src: url("../fonts/ClearSansThin.ttf");
+    font-family: "selawkb";
+    src: url("../fonts/selawkb.ttf");
 }
 
 body{
-    font-family: "ClearSansRegular";
+    font-family: "selawksl",sans-serif;
 }
 
 h1{
-    font-family: "ClearSansMedium";
     font-size: 3em;
+    font-weight: lighter;
 }
 
-h2{
-    font-size: 2.2em;
+h3{
+    font-size: 1.4em;
 }
