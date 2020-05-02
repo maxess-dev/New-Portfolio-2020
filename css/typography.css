@@ -1,0 +1,25 @@
+@font-face{
+    font-family: "Segoe",sans-serif;
+    src: url("../fonts/Segoe.woff");
+}
+
+@font-face{
+    font-family: "SegoeBold",sans-serif;
+    src: url("../fonts/SegoeBold.woff");
+}
+
+@font-face{
+    font-family: "SegoeBoldItalic",sans-serif;
+    src: url("../fonts/SegoeBoldItalic.woff");
+}
+
+@font-face{
+    font-family: "SegoeItalic",sans-serif;
+    src: url("../fonts/SegoeItalic.woff");
+}
+
+
+h1{
+    font-family: "Segoe";
+    font-size: 2em;
+}
