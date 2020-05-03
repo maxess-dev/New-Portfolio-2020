@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     color: white;
 }
@@ -14,8 +18,8 @@ h1{
 
 a{
     color: #FFF;
+    text-decoration: none;
 }
-
 
 button{
     padding: 0.55em 1.5em;
@@ -27,6 +31,12 @@ button{
     border-radius: 5px;
     font-family: "selawksl";
     cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+button:hover{
+    background-color: #CE2121;
+
 }
 
 .menu-burger{
@@ -55,10 +65,11 @@ button{
     margin-top: 12px;
 }
 
+/* FIRST SECTION */
 
 #home{
     height: 100vh;
-    background-color: BLACK;
+    background-image: url("../img/code.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -84,7 +95,7 @@ button{
     margin-top: 15px;
 }
 
-.profile > button{
+.profile > a > button{
     margin-top: 25px
 }
 
@@ -103,18 +114,21 @@ button{
     border-radius: 50%;
 }
 
+/* SECOND SECTION */
+
 #projects{
     height: 100vh;
 }
 
 .projects-grid-ctn{
     display: grid;
+    padding: 5px;
     width: 100%;
     height: 100%;
     background-color: white;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr 1fr;
-    grid-gap: 15px;
+    grid-gap: 5px;
 }
 
 .items{
@@ -122,6 +136,7 @@ button{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .items h3{
@@ -150,21 +165,17 @@ button{
     position: relative;
 }
 
-.grid-item-1:hover + .contents-tools{
-
-}
-
-.contents-tools{
-    background-color: white;
+.contents-tools-1{
+    background-color: #F9F9F9;
     position: absolute;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    display: none;
 }
 
-.contents-tools > span{
+.contents-tools-1 > span{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,7 +188,7 @@ button{
 
 .contents-dl,.contents-gh,.contents-db{
    background-color: #404040;
-   transition: all 0.5s ease;
+   transition: all 0.4s ease;
 }
 
 .contents-dl:hover{
@@ -204,32 +215,257 @@ button{
     grid-column: 3/4;
     grid-row: 1/2;
     background-color: #F9F9F9;
+    position: relative;
+}
+
+.contents-tools-2{
+    background-color: #F9F9F9;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.contents-tools-2 > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    font-size: 2em;
+    cursor: pointer;
 }
 
 .grid-item-3{
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: #F9F9F9;
+    position: relative;
+}
+
+.contents-tools-3{
+    background-color: #F9F9F9;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.contents-tools-3 > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    font-size: 2em;
+    cursor: pointer;
 }
 
 .grid-item-4{
     grid-column: 2/3;
     grid-row: 2/3;
     background-color: #F9F9F9;
+    position: relative;
+}
+
+.contents-tools-4{
+    background-color: #F9F9F9;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.contents-tools-4 > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    font-size: 2em;
+    cursor: pointer;
 }
 
 .grid-item-5{
     grid-column: 3/4;
     grid-row: 2/3;
     background-color: #F9F9F9;
+    position: relative;
 }
+
+.contents-tools-5{
+    background-color: #F9F9F9;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.contents-tools-5 > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* THIRD SECTION */
 
 #skills{
     height: 45vh;
     background-color: red;
 }
 
+#skills-ctn{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100%;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    padding: 80px;
+    cursor: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.box > h2 {
+    font-size: 2.1em;
+    font-family: "selawksb";
+    font-size: lighter;
+}
+
+.light-font{
+    font-family: "selawksl";
+}
+
+.box > p {
+    margin-top: 20px;
+    font-size: 1.4em;
+    line-height: 1.8em;
+}
+
+.skills-box-1{
+    background-color: #404040;
+    grid-column: 1/2;
+}
+
+.skills-box-1:hover{
+    background-color: #CE2121;
+}
+
+.skills-box-2{
+    background-color: #474747;
+    grid-column: 2/3;
+}
+
+.skills-box-2:hover{
+    background-color: #1886A2;
+}
+
+.skills-box-3{
+    background-color: #5A5A5A;
+    grid-column: 3/4;
+}
+
+.skills-box-3:hover{
+    background-color: #0CB877;
+}
+
+/* FOURTH SECTION */
+
 #studies{
-    height: 55vh;
-    background-color: blue;
+    height: 75vh;
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.studies-ctn{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dot{    
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #8F8F8F;
+    position: relative;
+    font-family: "selawkb";
+    font-size: 1.4em;
+    color: #545454;
+    cursor: pointer;
+}
+
+.dot-1:hover,
+.dot-2:hover,
+.dot-3:hover,
+.dot-4:hover,
+.dot-5:hover{
+    background-color: #0CB877;
+}
+
+.dot-6:hover,
+.dot-7:hover{
+    background-color: rgb(214, 96, 16);
+}
+
+.info-studies-1{
+    z-index: 2000;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 280px;
+    height: 70px;
+    bottom: 60px;
+    right: -30px;
+    background-color: #FFF;
+}
+
+.info-studies-1::after{
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #FFF;
+}
+
+.info-down{
+    bottom: -100px;
+}
+
+.info-down::after{
+    right: 20px;
+    top: -20px;
+    transform: rotate(180deg);
 }
