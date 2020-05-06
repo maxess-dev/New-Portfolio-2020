@@ -1,3 +1,37 @@
+@keyframes mouse {
+    0%{
+        opacity: 0.2;
+        bottom: 50px;
+    }
+    35%{
+        bottom: 80px;
+        opacity: 1;
+    }
+    55%{
+        opacity: 1;
+    }
+    100%{
+        bottom: 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes scroll {
+    0%{
+        top: 8px;
+        opacity: 1;
+    }
+
+    25%{
+        top: 10px;
+    }
+
+    100%{
+        top: 20px;
+    }
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +56,7 @@ a{
 }
 
 button{
-    padding: 0.55em 1.5em;
+    padding: 0.55em 1.4em;
     text-align: center;
     border: none;
     background-color: #1267BB;
@@ -31,38 +65,104 @@ button{
     border-radius: 5px;
     font-family: "selawksl";
     cursor: pointer;
-    transition: all 0.4s ease-out;
+    transition: all 0.2s ease;
+    border: 2px solid #1267BB;
 }
 
 button:hover{
-    background-color: #CE2121;
-
+    background-color: transparent;
+    border: 2px solid white;
 }
 
-.menu-burger{
-    width: 40px;
-    position: fixed;
+.mouse{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 55px;
+    border-radius: 15px;
+    opacity: 0;
+    border: 2px solid white;
     display: flex;
-    top: 6vh;
-    left: 7vh;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    animation: mouse 2s infinite ease;
+    cursor: pointer;
+    animation-delay: 2s;
 }
 
-.line-1,.line-2,.line-3{
-    display: block;
+.mouse::after{
+    position: absolute;
+    content: "";
+    top: 8px;
+    width: 3px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    animation: scroll 2s ease infinite;
+}
+
+.network-ctn{
+    z-index: 3000;
     width: 100%;
-    height: 3px;
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+    justify-content:center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.network-ctn > a {
+    display: inline-block;
+    width: 100%;
+}
+
+.dribbble,.linkedin,.instagram,.mail,.github,.twitter{
+    transition: all 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.6;
     background-color: white;
+    filter: grayscale(1);
 }
 
-.line-2{
-    margin-top: 12px;
+.twitter{
+    background-color: #00acee;
 }
 
-.line-3{
-    margin-top: 12px;
+.github{
+    background-color: #ff5311;
+}
+
+.dribbble{
+    background-color: #ea4c89;
+}
+
+.linkedin{
+    background-color: #0e76a8;
+}
+
+.instagram{
+     background: rgb(254,218,117);
+background: linear-gradient(281deg, rgba(254,218,117,1) 0%, rgba(250,126,30,1) 27%, rgba(214,41,118,1) 53%, rgba(150,47,191,1) 78%, rgba(79,91,213,1) 100%, rgba(0,212,255,1) 100%); 
+}
+
+.mail{
+    background-color: gray;
+}
+
+.dribbble:hover,.linkedin:hover,.instagram:hover,.mail:hover,.github:hover,.twitter:hover{
+    height: 120px;
+    opacity: 1;
+    transition: all 0.4s ease;
+    filter: grayscale(0);
+    font-size: 1.6em;
 }
 
 /* FIRST SECTION */
@@ -71,9 +171,7 @@ button:hover{
     height: 100vh;
     background-image: url("../img/code.jpg");
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat;
     object-fit: cover;
     display: flex;
 }
@@ -175,7 +273,7 @@ button:hover{
     display: none;
 }
 
-.contents-tools-1 > span{
+.contents-tools-1 > a > span{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,8 +286,12 @@ button:hover{
 
 .contents-dl,.contents-gh,.contents-db{
    background-color: #404040;
-   transition: all 0.4s ease;
+   transition: all 0.3s ease;
 }
+
+.contents-dl:hover,.contents-gh:hover,.contents-db:hover{
+    transform: scale(1.14);
+ }
 
 .contents-dl:hover{
     background-color: #CE2121;
@@ -228,7 +330,7 @@ button:hover{
     display: none;
 }
 
-.contents-tools-2 > span{
+.contents-tools-2 > a > span{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,7 +358,7 @@ button:hover{
     display: none;
 }
 
-.contents-tools-3 > span{
+.contents-tools-3 > a > span{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -284,7 +386,7 @@ button:hover{
     display: none;
 }
 
-.contents-tools-4 > span{
+.contents-tools-4 > a > span{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -312,7 +414,7 @@ button:hover{
     display: none;
 }
 
-.contents-tools-5 > span{
+.contents-tools-5 > a > span{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -326,13 +428,11 @@ button:hover{
 /* THIRD SECTION */
 
 #skills{
-    height: 45vh;
-    background-color: red;
+    width: 100%;
 }
 
 #skills-ctn{
-    display: flex;
-    flex-direction: row;
+    display: grid;
     width: 100%;
     height: 100%;
     background-color: white;
@@ -343,9 +443,8 @@ button:hover{
 .box{
     display: flex;
     flex-direction: column;
-    background-color: red;
+    justify-content: center;
     padding: 80px;
-    cursor: none;
     transition: all 0.4s ease-in-out;
 }
 
@@ -395,8 +494,8 @@ button:hover{
 /* FOURTH SECTION */
 
 #studies{
-    height: 75vh;
-    background-color: #F9F9F9;
+    height: 50vh;
+    background-color: #5A5A5A;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -409,44 +508,39 @@ button:hover{
     align-items: center;
 }
 
+.dot::before{
+    position: absolute;
+    content: " ";
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
 .dot{    
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background-color: #8F8F8F;
+    background-color: rgb(141, 141, 141);
     position: relative;
     font-family: "selawkb";
     font-size: 1.4em;
-    color: #545454;
-    cursor: pointer;
+    color: white;
 }
 
-.dot-1:hover,
-.dot-2:hover,
-.dot-3:hover,
-.dot-4:hover,
-.dot-5:hover{
-    background-color: #0CB877;
+.info-studies-1:hover{
+    border: 4px solid white;
+    background-color: transparent;
+    color: white;
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+    right: -16px;
 }
 
-.dot-6:hover,
-.dot-7:hover{
-    background-color: rgb(214, 96, 16);
-}
-
-.info-studies-1{
-    z-index: 2000;
-    position: absolute;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    width: 280px;
-    height: 70px;
-    bottom: 60px;
-    right: -30px;
-    background-color: #FFF;
-}
 
 .info-studies-1::after{
     content: "";
@@ -457,15 +551,73 @@ button:hover{
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #FFF;
+    border-top: 20px solid white;
 }
 
+
+.info-studies-1{
+    z-index: 2000;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 280px;
+    height: 70px;
+    bottom: 60px;
+    right: -30px;
+    background-color: #0CB877;
+    transition: all 0.2s ease;
+}
+
+.orange{
+    background-color: #FF7A48;
+}
+
+
 .info-down{
-    bottom: -100px;
+    bottom: -110px;
 }
 
 .info-down::after{
     right: 20px;
     top: -20px;
     transform: rotate(180deg);
+}
+
+/* FIFTH SECTION */
+
+#end{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(65, 65, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.go-up{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: rgb(65, 65, 65);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    -webkit-box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.39);
+    box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.39);
+    border: 4px solid white;
+}
+
+.go-up:hover{
+    box-shadow: none;
+    border: 4px solid white;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    transition: 0.25s ease;
 }

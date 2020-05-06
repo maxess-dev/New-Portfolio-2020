@@ -63,19 +63,22 @@ function projectHover(){
 
 projectHover()
 
-ScrollReveal().reveal('.grid-item-1', { delay: 600 });
-ScrollReveal().reveal('.grid-item-2', { delay: 800 });
-ScrollReveal().reveal('.grid-item-3', { delay: 1100 });
-ScrollReveal().reveal('.grid-item-4', { delay: 1300 });
-ScrollReveal().reveal('.grid-item-5', { delay: 1600 });
 
+ScrollReveal().reveal('.skills-box-1', { delay: 500 });
+ScrollReveal().reveal('.skills-box-2', { delay: 700 });
+ScrollReveal().reveal('.skills-box-3', { delay: 900 });
 
-const info1 = document.querySelector('.info-studies-1')
-const info2 = document.querySelector('.dot')
+ScrollReveal().reveal('.grid-item-1', { delay: 1100 });
+ScrollReveal().reveal('.grid-item-2', { delay: 1300 });
+ScrollReveal().reveal('.grid-item-3', { delay: 1500 });
+ScrollReveal().reveal('.grid-item-4', { delay: 1700 });
+ScrollReveal().reveal('.grid-item-5', { delay: 1900 });
 
+ScrollReveal().reveal('#studies', { delay: 500 });
+ScrollReveal().reveal('.dot-1', { delay: 700 });
+ScrollReveal().reveal('.dot-2', { delay: 900 });
+ScrollReveal().reveal('.dot-4', { delay: 1100 });
+ScrollReveal().reveal('.dot-6', { delay: 1300 });
 
-info2.addEventListener("mouseover",() => {
-    info1.style.display = "flex";
-    info2.style.backgroundColor = "#0CB877";
-    console.log("ok")
-})
+ScrollReveal().reveal('#end', { delay: 1300 });
+ScrollReveal().reveal('.go-up', { delay: 1500 });

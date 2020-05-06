@@ -1,0 +1,82 @@
+#studies{
+    height: 800px;
+}
+
+.studies-ctn{
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+
+#skills-ctn{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+}
+
+.info-studies-1{
+    width: 280px;
+    height: 70px;
+    right: 0px;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.info-studies-1:hover{
+    transform: scale(1);
+    transition: all 0.2s ease;
+    bottom: 50px;
+    left: -130px;
+}
+
+.info-studies-1::after{
+    display: none;
+}
+
+#projects{
+    height: auto;
+}
+
+.projects-grid-ctn{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,400px);
+    grid-gap: none;
+}
+
+.grid-item-1{
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+.grid-item-2{
+    grid-column: 1/5;
+    grid-row: 2/3;
+}   
+
+.grid-item-3{
+    grid-column: 1/5;
+    grid-row: 3/4;
+}
+
+.grid-item-4{
+    grid-column: 1/5;
+    grid-row: 4/5;
+}
+
+.grid-item-5{
+    grid-column: 1/5;
+    grid-row: 5/6;
+}
+
+.skills-box-1{
+    padding: 50px;
+}
+
+.skills-box-2{
+    padding: 50px;
+}
+
+.skills-box-3{
+    padding: 50px;
+
+}
